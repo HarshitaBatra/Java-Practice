@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class AdjacentNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the first number ");
+		int a = sc.nextInt();
+		if(a<=0) {
+			System.out.println("Invalid input");
+			System.exit(0);
+		}
+		System.out.println("Enter the second number ");
+		int b = sc.nextInt();
+		if(b<=0 || b<a) {
+			System.out.println("Invalid input");
+			System.exit(0);
+		}
+		System.out.println("Enetr number of terms");
+		int c = sc.nextInt();
+		if(c<=0) {
+			System.out.println("Invalid input");
+			System.exit(0);
+		}
+		System.out.println(a+","+b);
+		for(int i=1;i<=c;i++) {
+			int d = a*b;
+			a = b;
+			b = d;
+			if(i==c) {
+				System.out.print(d);
+			}
+			else {
+			System.out.print(d+",");
+			}
+		}
+	}
+
+}
